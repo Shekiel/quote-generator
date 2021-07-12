@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css?family=Montserrat&display=swap');
+
 html {
   box-sizing: border-box;
 }
@@ -32,7 +34,7 @@ body {
   font-size: 2rem;
 }
 
-.fa-quotw-left {
+.fa-quote-left {
   font-size: 4rem;
 }
 
@@ -74,10 +76,9 @@ button:active {
 .twitter-button:hover {
   color: #38a1f3;
 }
-
-/* .fa-twitter {
+.fa-twitter {
   font-size: 1.5rem;
-} */
+}
 
 /* Media Query: Tablet or smaller */
 @media screen and (max-width: 1000px) {

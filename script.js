@@ -3,6 +3,7 @@ const quoteText = document.getElementById('quote');
 const authorText = document.getElementById('author');
 const twitterBtn = document.getElementById('twitter');
 const newQuoteBtn = document.getElementById('new-quote');
+const loader = document.getElementById('loader');
 
 let apiQuotes = [];
 
@@ -12,6 +13,9 @@ function newQuote() {
   const quote = apiQuotes[Math.floor(Math.random() * apiQuotes.length)];
 
   // Check if Author field is blank and replace it with 'Unknown
+  authorText.textContent = quote.author;
+  quoteText.textContent = quote.text;
+
   if (!quote.author) {
     authorText.textContent = 'Unknown';
   } else {
@@ -23,7 +27,9 @@ function newQuote() {
   } else {
     quoteText.classList.remove('long-quote');
   }
+  // //Set Quote, Hide Loader
   quoteText.textContent = quote.text;
+  // complete();
 }
 
 // Get Quote From API
